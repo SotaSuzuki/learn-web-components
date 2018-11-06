@@ -1,0 +1,16 @@
+:root {
+  font-family: sans-serif;
+}
+
+my-button {
+  display: inline-block;
+  background-color: #3a3;
+}
+
+my-button.secondary {
+  background-color: #fa3;
+}
+
+.wrapper {
+  margin-bottom: 30px;
+}

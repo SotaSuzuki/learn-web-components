@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello Web Components</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Hello Web Components <s>with ES Modules</s></h1>
+  
+  <div>
+    <h2>Components</h2>
+    
+    <div class="wrapper">
+      <my-button>MYBUTTON</my-button>
+      <my-button class="secondary">MyBUTTON 2</my-button>
+    </div>
+    
+    <button id="color-change">Change button color</button>
+    <button id="color-change-all">Change button color</button>
+  </div>
+  
+  <script src="./js/MyButton.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/nomodule.js" nomodule></script>
+</body>
+</html>
