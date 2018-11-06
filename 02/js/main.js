@@ -1,3 +1,5 @@
+import './MyButton'
+
 const $colorChanger = document.querySelector('#color-change')
 const $colorChangerAll = document.querySelector('#color-change-all')
 const $myButtons = document.querySelectorAll('my-button')
