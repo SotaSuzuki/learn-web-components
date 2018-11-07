@@ -1,11 +1,12 @@
-class FancyButton extends HTMLElement {
+export class FancyButton extends HTMLElement {
   constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
       <style>
-        button { color: blue; }
+        button { color: red; font-size: 28px; border: 1px solid red; }
         :host {
+          display: inline-block;
           background-color: var(--button-bg-color, #333);
           padding: 12px;
         }
@@ -32,13 +33,14 @@ class FancyButton extends HTMLElement {
   
   onClickButton (e) {
     e.stopPropagation()
-    const fancyParagraph = customElements.get('fancy-paragraph')
-    const fancyButton = customElements.get('fancy-button')
     const fancyParagraphElement = document.querySelector('fancy-paragraph')
-    fancyParagraphElement.setAttribute('color', '#9d9b00')
+    fancyParagraphElement.color = '#fff'
     
-    console.log(`${fancyButton.name} clicked.`)
+    const name = customElements.get('fancy-button').name
+    console.log(`${name} clicked.`)
   }
 }
 
 customElements.define('fancy-button', FancyButton)
+customElements.whenDefined('fancy-button')
+  .then(() => console.log('FancyButton defined'))
