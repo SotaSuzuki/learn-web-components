@@ -1,3 +1,4 @@
+import '../scss/style.scss'
 import './MyButton'
 
 const $colorChanger = document.querySelector('#color-change')
